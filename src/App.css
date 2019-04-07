@@ -1,4 +1,86 @@
+body {
+  margin: 0;
+}
 
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #faefe1;
+  position: sticky; 
+  top: 0;
+  padding: 5px;
+  
+
+}
+h4 {
+  font-family: 'Source Sans Pro';
+}
+.add-btn {
+  border: none;
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  background-color: #faefe1;
+}
+.hero {
+  height: 60vh;
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #faefe1;
+  
+}
 h1 {
   color: #FF9200;
+  font-family: 'Playfair Display';
+  font-size: 72px;
+  letter-spacing: 1px;
+  margin-top: 100px;
+  font-style: italic;
+}
+.random-btn {
+  border: none;
+  font-size: 14px;
+  font-family: 'Source Sans Pro';
+  background-color: #faefe1;
+  cursor: pointer;
+  padding: 10px;
+}
+.card-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  display: flex; 
+  flex-flow: column; 
+  justify-content: center;
+  width: 200px;
+  height: 300px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+}
+.meal-name {
+  font-family: 'Playfair Display';
+  color: rgb(255, 136, 0);
+  margin: 10px;
+  
+}
+.classification {
+  font-family: 'Source Sans Pro';
+  margin-left: 10px;
+  
+}
+
+.lists {
+  font-family: 'Source Sans Pro';
+  padding-left: 10px; 
+}
+
+.ingredients,
+.directions {
+  padding: 0;
+  
 }

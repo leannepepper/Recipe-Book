@@ -9,15 +9,16 @@ class App extends Component {
       <div className="App">
         <header>
           <h4>Scrumptious</h4>
-          <button>+ Add</button>
+          <button className="add-btn">+ Add</button>
         </header>
+        <div className="hero">
           <h1>Scrumptious</h1>
-          <h5>What's for dinner? Who cares!</h5>
-        <body>
-          <div className="card-container">
-            <RecipeCard />
-          </div>
-        </body>
+          <button className="random-btn">What's for dinner? Who cares!</button>
+        </div>
+   
+        <main>
+          <RecipeCard />
+        </main>
       </div>
     );
   }
