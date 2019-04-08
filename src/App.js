@@ -9,8 +9,14 @@ state = {
     {
       name: "Chicken Pesto",
       id: 1,
-      ingredients: ['milk', 'chicken', 'pesto'],
+      ingredients: ['Milk', 'Chicken', 'Pesto', 'Ham'],
       directions: ['step 1', 'step 2', 'step 3']
+    },
+    {
+      name: "Seafood Pasta",
+      id: 1,
+      ingredients: ['Pasta', 'Fish', 'Butter'],
+      directions: ['step 1', 'step 22323', 'step 2133', 'step 86']
     }
 
   ]
@@ -23,7 +29,7 @@ handleAddRecipe = (name, ingredients, directions) => {
       {
         name: name, 
         id: (this.prevRecipeId += 1), 
-        ingredients: [ingredients],
+        ingredients: ingredients,
         directions: [directions]
       },
       ...this.state.recipes
