@@ -1,42 +1,46 @@
 body {
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background-color: #faefe1;
   position: sticky; 
   top: 0;
   padding: 5px;
-  
-
 }
+
 h4 {
   font-family: 'Source Sans Pro';
 }
+
 .add-btn {
   border: none;
   font-family: 'Source Sans Pro';
   font-size: 16px;
   background-color: #faefe1;
 }
+
 .hero {
   height: 60vh;
   display:flex;
   flex-flow: column;
   align-items: center;
   background-color: #faefe1;
-  
+  overflow: hidden;
 }
+
 h1 {
   color: #FF9200;
   font-family: 'Playfair Display';
-  font-size: 72px;
+  font-size: 44px;
   letter-spacing: 1px;
   margin-top: 100px;
   font-style: italic;
 }
+
 .random-btn {
   border: none;
   font-size: 14px;
@@ -45,12 +49,14 @@ h1 {
   cursor: pointer;
   padding: 10px;
 }
+
 .card-container {
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .card {
   display: flex; 
   flex-flow: column; 
@@ -61,16 +67,22 @@ h1 {
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
+  
+}
+.card-btns {
+  display: flex;
+}
+.btn {
+  margin-left: 5px;
+}
+
+.card-header {
+  display: flex;
 }
 .meal-name {
   font-family: 'Playfair Display';
   color: rgb(255, 136, 0);
   margin: 10px;
-  
-}
-.classification {
-  font-family: 'Source Sans Pro';
-  margin-left: 10px;
   
 }
 
@@ -83,4 +95,11 @@ h1 {
 .directions {
   padding: 0;
   
+}
+
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 62px;
+  }
 }
