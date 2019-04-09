@@ -14,7 +14,7 @@ state = {
     },
     {
       name: "Seafood Pasta",
-      id: 1,
+      id: 2,
       ingredients: ['Pasta', 'Fish', 'Butter'],
       directions: ['step 1', 'step 22323', 'step 2133', 'step 86']
     }
@@ -23,6 +23,18 @@ state = {
 } //End State
 prevRecipeId = 2;
 
+// Remove Recipe Function 
+handleRemoveRecipe = index => {
+  this.setState({
+    recipes: [
+      ...this.state.recipes.slice(0, index),
+      ...this.state.recipes.slice(index + 1)
+    ]
+  });
+};
+
+
+// Add Recipe Function 
 handleAddRecipe = (name, ingredients, directions) => {
   this.setState({
     recipes : [
@@ -51,6 +63,7 @@ handleAddRecipe = (name, ingredients, directions) => {
    
         <main>
           <RecipeCards recipes={this.state.recipes}
+          handleRemoveRecipe={this.handleRemoveRecipe}
            />
         </main>
       </div>

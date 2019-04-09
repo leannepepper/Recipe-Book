@@ -16,7 +16,7 @@ const Card = (props) => (
             </ol>
         </div>
         <div className="card-btns">
-            <button className="delete btn">Delete</button>
+            <button className="delete btn" onClick={() => props.handleRemoveRecipe(props.index)}>Delete</button>
             <button className="edit btn">Edit</button>
         </div>
     </div> 
