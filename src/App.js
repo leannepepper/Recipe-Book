@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './RecipeCards';
 import './App.css';
+import Modal from './Modal'; 
 import RecipeCards from './RecipeCards';
 
 class App extends Component {
 state = {
+
+  show: false, 
+
   recipes: [
     {
       name: "Chicken Pesto",
@@ -23,6 +27,18 @@ state = {
 } //End State
 prevRecipeId = 2;
 
+
+// Modal functions 
+showModal= () => {
+  this.setState({show: true}); 
+  console.log(this.state.show)
+}
+
+hideModal = () => {
+  this.setState({show: false});
+}
+
+
 // Remove Recipe Function 
 handleRemoveRecipe = index => {
   this.setState({
@@ -32,7 +48,6 @@ handleRemoveRecipe = index => {
     ]
   });
 };
-
 
 // Add Recipe Function 
 handleAddRecipe = (name, ingredients, directions) => {
@@ -54,11 +69,13 @@ handleAddRecipe = (name, ingredients, directions) => {
       <div className="App">
         <div className="header">
           <h4>Scrumptious</h4>
-          <button className="add-btn">+ Add</button>
+          <button className="add-btn" onClick={this.showModal}>+ Add</button>
         </div>
         <div className="hero">
           <h1>Scrumptious</h1>
           <button className="random-btn">What's for dinner? Who cares!</button>
+          <Modal show={this.state.show} handleClose={this.hideModal} />
+      
         </div>
    
         <main>
