@@ -30,12 +30,17 @@ prevRecipeId = 2;
 
 // Modal functions 
 showModal= () => {
-  this.setState({show: true}); 
+  this.setState({
+    show: true
+  }); 
+
   console.log(this.state.show)
 }
 
 hideModal = () => {
-  this.setState({show: false});
+  this.setState({
+    show: false
+  });
 }
 
 
